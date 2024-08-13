@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:padding="5dp"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="96dp"
+            android:layout_height="62dp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/pic1"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="14dp"
+            android:contentDescription="@string/trademark" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/inalfa"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingStart="30dp"
+            android:paddingEnd="20dp"
+            tools:layout_editor_absoluteX="193dp" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/btn_batch_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textSize="10dp"
+                android:text="批量公差"/>
+
+            <Button
+                android:id="@+id/btn_data_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textSize="10dp"
+                android:text="数据刷新"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_data_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textSize="10dp"
+                android:text="数据保存"/>
+<!--            <Button-->
+<!--                android:id="@+id/btn_data_get"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/btn"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:textSize="10dp"-->
+<!--                android:text="数据导入"/>-->
+            <Button
+                android:id="@+id/forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textSize="10dp"
+                android:text="上一页"/>
+            <Button
+                android:id="@+id/backward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textSize="10dp"
+                android:text="下一页"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/row_color">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="测点代号"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="上公差"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="下公差"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="修正值"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/F1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/row_color"
+                android:gravity="center"
+                android:text="F1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:lines="2"/>
+
+            <EditText
+                android:id="@+id/ed_f1_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f1_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f1_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/F2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/row_color"
+                android:gravity="center"
+                android:lines="2"
+                android:text="F2"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ed_f2_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f2_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f2_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/F3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="F3"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/row_color"
+                android:lines="2" />
+
+            <EditText
+                android:id="@+id/ed_f3_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f3_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f3_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/F4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="F4"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/row_color"
+                android:lines="2"/>
+            <EditText
+                android:id="@+id/ed_f4_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f4_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f4_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/F5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="F5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/row_color"
+                android:lines="2"/>
+            <EditText
+                android:id="@+id/ed_f5_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f5_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+
+            <EditText
+                android:id="@+id/ed_f5_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:digits="0123456789-."
+                android:inputType="numberDecimal|numberSigned"
+                android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/F6"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="F6"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/row_color"
+                android:lines="2"/>
+            <EditText
+                android:id="@+id/ed_f6_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f6_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+
+            <EditText
+                android:id="@+id/ed_f6_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."
+                android:textSize="15sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/F7"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="F7"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/row_color"
+                android:lines="2"/>
+            <EditText
+                android:id="@+id/ed_f7_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f7_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f7_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/F8"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="F8"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/row_color"
+                android:lines="2"/>
+            <EditText
+                android:id="@+id/ed_f8_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f8_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f8_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/F9"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="F9"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/row_color"
+                android:lines="2"/>
+            <EditText
+                android:id="@+id/ed_f9_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f9_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f9_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/F10"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="F10"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/row_color"
+                android:lines="2"/>
+            <EditText
+                android:id="@+id/ed_f10_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f10_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+            <EditText
+                android:id="@+id/ed_f10_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."/>
+        </TableRow>
+
+
+
+
+
+    </TableLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+
+

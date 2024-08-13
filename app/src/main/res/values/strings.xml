@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">NFC蓝牙数据采集</string>
+    <string name="login">密码登录</string>
+    <string name="enter">登录</string>
+    <string name="verify">获取验证码</string>
+    <string name="get_verification">登录密码：</string>
+    <string name="hint_message">Username</string>
+    <string name="collect_inf">登录账号：</string>
+    <string name="register">用户注册</string>
+    <string name="reset_password">重置密码</string>
+    <string name="verification_code">请输入验证码</string>
+    <string name="company">江苏润模汽车检测装备有限公司</string>
+    <string name="company_en">Jiangsu RunMo Automotive Inspection Equipment Co.,Ltd.</string>
+    <string name="system_name">数字化测量系统</string>
+    <string name="system_en">Digital Management System</string>
+    <string name="dins">Dins用户登录</string>
+    <string name="inalfa">Inalfa英纳法</string>
+    <string name="measuring_point_set">测点设置</string>
+    <string name="measuring_point_conf">测点配置</string>
+    <string name="measuring_point_adjust">测点调整</string>
+    <string name="start_measure">开始测量</string>
+    <string name="ordinal_measurement">有序测量</string>
+    <string name="disordered_measure">无序测量</string>
+    <string name="data_analyse">数据分析</string>
+    <string name="result_review">结果预览</string>
+    <string name="data_upload">数据上传</string>
+    <string name="trademark">trademark</string>
+    <string name="password">密码：</string>
+    <string name="enterPassword">Password</string>
+    <string name="verification_code_login">验证码登录</string>
+    <string name="window">天窗</string>
+</resources>

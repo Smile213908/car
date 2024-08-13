@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="com_btn1">#0187FD</color>
+    <color name="bluetooth_btn">#01FD3C</color>
+    <color name="NG">#FE005E</color>
+    <color name="OK">#00DC96</color>
+    <color name="connect">#367DBA</color>
+    <color name="cancel">#949B96</color>
+    <color name="search">#81C0F6</color>
+    <color name="first_used">#00458D</color>
+    <color name="second_used">#54BBBC</color>
+    <color name="third_used">#0099FE</color>
+    <color name="fourth_used">#01FD3C</color>
+    <color name="fifth_used">#77A1B5</color>
+    <color name="red">#FD0101</color>
+    <color name="red_used">#FE005E</color>
+    <color name="color_Gray">#A5AAAA</color>
+</resources>
